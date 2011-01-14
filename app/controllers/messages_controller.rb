@@ -42,7 +42,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(params[:message])
     @message.user = params[:user]
-    @message.content = params[:content]
+    @message.content = CGI.unescape(params[:content])
     
     respond_to do |format|
       if @message.save
