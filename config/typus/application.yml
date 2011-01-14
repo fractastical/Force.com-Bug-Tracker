@@ -1,0 +1,14 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Message:
+  fields:
+    default: user
+    form: user, content
+  order_by: 
+  relationships: 
+  filters: 
+  search: 
+  application: rails_cinch
+
