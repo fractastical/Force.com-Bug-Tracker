@@ -3,4 +3,7 @@
 # Use the README file as a reference to customize settings.
 
 admin:
-  Message: create, read, delete
+  Message: create, read
+
+editor:
+    Message: create, read

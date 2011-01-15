@@ -4,11 +4,12 @@
 
 Message:
   fields:
-    default: user
+    default: user, content
     form: user, content
-  order_by: 
+  order_by: user
   relationships: 
   filters: 
   search: 
   application: rails_cinch
+
 
