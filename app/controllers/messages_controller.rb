@@ -41,7 +41,7 @@ class MessagesController < ApplicationController
   # POST /messages.xml
   def create
     @message = Message.new(params[:message])
-    @message.user = params[:user]
+    @message.user = CGI.unescape(params[:user])
     @message.content = CGI.unescape(params[:content])
     @message.tag_list = CGI.unescape(params[:tags])
     
