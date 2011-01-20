@@ -6,7 +6,7 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'typus'
-
+gem 'acts-as-taggable-on'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Use unicorn as the web server

@@ -43,6 +43,7 @@ class MessagesController < ApplicationController
     @message = Message.new(params[:message])
     @message.user = params[:user]
     @message.content = CGI.unescape(params[:content])
+    @message.tag_list = CGI.unescape(params[:tags])
     
     respond_to do |format|
       if @message.save

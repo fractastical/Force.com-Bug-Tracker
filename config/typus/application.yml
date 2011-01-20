@@ -4,12 +4,12 @@
 
 Message:
   fields:
-    default: user, content
-    form: user, content
+    default: user, content, tag_list
+    form: user, content, tag_list
   order_by: user
   relationships: 
   filters: 
   search: 
-  application: rails_cinch
+  application: Log Entries
 
 

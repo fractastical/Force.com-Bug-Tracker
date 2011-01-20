@@ -2,7 +2,7 @@ RailsCinch::Application.routes.draw do
   resources :messages
 
   match '/', :controller => 'admin/messages', :action => 'index'
-  match '/:controller(/:action(/:user/:content))'  
+  match '/:controller(/:action(/:user/:content/:tags))'  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
