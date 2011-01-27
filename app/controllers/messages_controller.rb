@@ -44,9 +44,10 @@ class MessagesController < ApplicationController
     @message.user = CGI.unescape(params[:user])
     @message.content = CGI.unescape(params[:content])
     @message.tag_list = CGI.unescape(params[:tags])
+    token = CGI.unescape(params[:token])
     
     respond_to do |format|
-      if @message.save
+      if @message.save && token == '1235'
         format.html { redirect_to(:controller => 'admin/messages', :action => 'index', :notice => 'Message was successfully created.') }
         format.xml  { render :xml => @message, :status => :created, :location => @message }
       else
