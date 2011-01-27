@@ -47,11 +47,11 @@ class MessagesController < ApplicationController
     token = CGI.unescape(params[:token])
     
     respond_to do |format|
-      if @message.save && token == '1235'
+      if token == '1235' && @message.save
         format.html { redirect_to(:controller => 'admin/messages', :action => 'index', :notice => 'Message was successfully created.') }
         format.xml  { render :xml => @message, :status => :created, :location => @message }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => 'index', :notice => 'Invalid token' }
         format.xml  { render :xml => @message.errors, :status => :unprocessable_entity }
       end
     end
