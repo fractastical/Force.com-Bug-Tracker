@@ -1,7 +1,7 @@
 Typus.setup do |config|
 
   # Application name.
-  config.admin_title = "Saasy Logger"
+  config.admin_title = "Unofficial Salesforce Knowledge Base"
   # config.admin_sub_title = ""
 
   # When mailer_sender is set, password recover is enabled. This email
